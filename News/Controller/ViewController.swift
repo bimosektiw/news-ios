@@ -26,6 +26,7 @@ class ViewController: UIViewController, CoreApiDelegate {
         
         sourcesApi.delegate = self
         sourcesApi.start()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     func finish(interFace: CoreApi, responseHeaders: HTTPURLResponse, data: Data) {

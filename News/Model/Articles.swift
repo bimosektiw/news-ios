@@ -11,7 +11,7 @@ import Foundation
 struct Articles: Decodable {
     var status: String?
     var totalResults: Int?
-    var articles: [ArticleNews]?
+    var articles: [ArticleNews] = []
 }
 
 struct ArticleNews: Decodable{

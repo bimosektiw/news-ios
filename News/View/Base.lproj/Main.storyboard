@@ -48,10 +48,15 @@
         <scene sceneID="Bq0-W7-FjH">
             <objects>
                 <navigationController id="Th6-IT-Hab" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DUn-Na-ymS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="DUn-Na-ymS">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.056613401090000001" blue="0.0071540965639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EkW-QH-cNi">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QeR-9N-4XV"/>
                     </connections>
@@ -69,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tpM-3j-24j">
-                                <rect key="frame" x="10" y="30" width="355" height="627"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="teM-rY-Za2">
                                     <size key="itemSize" width="50" height="50"/>
@@ -95,10 +100,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tpM-3j-24j" firstAttribute="leading" secondItem="cfY-Xe-lyN" secondAttribute="leading" constant="10" id="AhW-XQ-rLt"/>
-                            <constraint firstItem="tpM-3j-24j" firstAttribute="bottom" secondItem="cfY-Xe-lyN" secondAttribute="bottom" constant="-10" id="EqT-EK-UAQ"/>
-                            <constraint firstItem="tpM-3j-24j" firstAttribute="top" secondItem="cfY-Xe-lyN" secondAttribute="top" constant="10" id="UX6-kB-zJq"/>
-                            <constraint firstItem="tpM-3j-24j" firstAttribute="trailing" secondItem="cfY-Xe-lyN" secondAttribute="trailing" constant="-10" id="ucH-fb-Yo6"/>
+                            <constraint firstItem="tpM-3j-24j" firstAttribute="leading" secondItem="cfY-Xe-lyN" secondAttribute="leading" id="AhW-XQ-rLt"/>
+                            <constraint firstItem="tpM-3j-24j" firstAttribute="bottom" secondItem="cfY-Xe-lyN" secondAttribute="bottom" id="EqT-EK-UAQ"/>
+                            <constraint firstItem="tpM-3j-24j" firstAttribute="top" secondItem="cfY-Xe-lyN" secondAttribute="top" id="UX6-kB-zJq"/>
+                            <constraint firstItem="tpM-3j-24j" firstAttribute="trailing" secondItem="cfY-Xe-lyN" secondAttribute="trailing" id="ucH-fb-Yo6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cfY-Xe-lyN"/>
                     </view>
@@ -111,4 +116,5 @@
             <point key="canvasLocation" x="1441" y="71"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
