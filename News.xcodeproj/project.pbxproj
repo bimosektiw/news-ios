@@ -24,6 +24,7 @@
 		CE9E8E8D228A973C00D1CE49 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E8E8B228A973C00D1CE49 /* ArticleView.swift */; };
 		CE9E8E8E228A973C00D1CE49 /* ArticleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9E8E8C228A973C00D1CE49 /* ArticleView.xib */; };
 		CE9E8E90228A990300D1CE49 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E8E8F228A990300D1CE49 /* Articles.swift */; };
+		CEE55169229657A5005EACE1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE55168229657A5005EACE1 /* Extensions.swift */; };
 		EC313AE3066C80BA17102ED9 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA5677F948AC96681C1B6FB /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		CE9E8E8B228A973C00D1CE49 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		CE9E8E8C228A973C00D1CE49 /* ArticleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleView.xib; sourceTree = "<group>"; };
 		CE9E8E8F228A990300D1CE49 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
+		CEE55168229657A5005EACE1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DDD38089F95DF0F854FC6EAA /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 		EFA5677F948AC96681C1B6FB /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9E8E7A2289580F00D1CE49 /* Constants.swift */,
+				CEE55168229657A5005EACE1 /* Extensions.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				CE9E8E602289523200D1CE49 /* AppDelegate.swift in Sources */,
 				CE9E8E792289553800D1CE49 /* CoreApi.swift in Sources */,
 				CE9E8E8D228A973C00D1CE49 /* ArticleView.swift in Sources */,
+				CEE55169229657A5005EACE1 /* Extensions.swift in Sources */,
 				CE9E8E8A228A6D5800D1CE49 /* ArticlesController.swift in Sources */,
 				CE8C3E4A228BF2A400D95A9D /* ArticleApi.swift in Sources */,
 				CE9E8E90228A990300D1CE49 /* Articles.swift in Sources */,
