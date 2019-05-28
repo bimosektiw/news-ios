@@ -13,6 +13,7 @@ import SwiftyJSON
 class ViewController: UIViewController, CoreApiDelegate {
     
     @IBOutlet weak var sourceTable: UITableView!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     let sourceViewId = "SourceView"
     var sourceData = Sources()
@@ -26,16 +27,32 @@ class ViewController: UIViewController, CoreApiDelegate {
         
         sourcesApi.delegate = self
         sourcesApi.start()
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.title = "News"
+        
+        self.loading.startAnimating()
+        self.sourceTable.isHidden = true
     }
     
     func finish(interFace: CoreApi, responseHeaders: HTTPURLResponse, data: Data) {
         do{
             self.sourceData = try JSONDecoder().decode(Sources.self, from: data)
             self.sourceTable.reloadData()
+            self.loading.stopAnimating()
+            self.sourceTable.isHidden = false
         }catch{
             
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = self.sourceTable.indexPathsForSelectedRows{
+            for at in index {
+                self.sourceTable.deselectRow(at: at, animated: true)
+            }
+        }
+        
     }
 }
 
@@ -61,7 +78,10 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = sourceTable.dequeueReusableCell(withIdentifier: sourceViewId, for: indexPath) as! SourceView
         let data = sourceData.sources?[indexPath.row]
+//        let bg = UIView()
+//        bg.backgroundColor = UIColor.lightGray
         cell.title.text = data?.name
+//        cell.selectedBackgroundView = bg
         return cell
     }
     

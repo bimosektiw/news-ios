@@ -18,9 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xfy-sW-H8B">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jwo-ko-SXK">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Jvk-Mv-w8y"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="JoQ-qN-7IS"/>
@@ -31,13 +35,16 @@
                         <constraints>
                             <constraint firstItem="Jwo-ko-SXK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Xz-Os-3FL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jwo-ko-SXK" secondAttribute="trailing" id="Zhc-WF-23p"/>
+                            <constraint firstItem="xfy-sW-H8B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cia-7D-oO3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jwo-ko-SXK" secondAttribute="bottom" id="naa-1q-lqn"/>
                             <constraint firstItem="Jwo-ko-SXK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wc9-UW-ZfO"/>
+                            <constraint firstItem="xfy-sW-H8B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xAr-mZ-b04"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ef2-3V-VNx"/>
                     <connections>
+                        <outlet property="loading" destination="xfy-sW-H8B" id="gmz-YA-3ud"/>
                         <outlet property="sourceTable" destination="Jwo-ko-SXK" id="yMh-Mr-fyI"/>
                     </connections>
                 </viewController>
@@ -73,6 +80,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kyV-Bi-yDY">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tpM-3j-24j">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,13 +112,16 @@
                         <constraints>
                             <constraint firstItem="tpM-3j-24j" firstAttribute="leading" secondItem="cfY-Xe-lyN" secondAttribute="leading" id="AhW-XQ-rLt"/>
                             <constraint firstItem="tpM-3j-24j" firstAttribute="bottom" secondItem="cfY-Xe-lyN" secondAttribute="bottom" id="EqT-EK-UAQ"/>
+                            <constraint firstItem="kyV-Bi-yDY" firstAttribute="centerY" secondItem="6XX-fW-NtF" secondAttribute="centerY" id="PR9-hk-ecw"/>
                             <constraint firstItem="tpM-3j-24j" firstAttribute="top" secondItem="cfY-Xe-lyN" secondAttribute="top" id="UX6-kB-zJq"/>
+                            <constraint firstItem="kyV-Bi-yDY" firstAttribute="centerX" secondItem="6XX-fW-NtF" secondAttribute="centerX" id="jWt-sh-QzR"/>
                             <constraint firstItem="tpM-3j-24j" firstAttribute="trailing" secondItem="cfY-Xe-lyN" secondAttribute="trailing" id="ucH-fb-Yo6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cfY-Xe-lyN"/>
                     </view>
                     <connections>
                         <outlet property="articleCollection" destination="tpM-3j-24j" id="rxg-nK-sMc"/>
+                        <outlet property="loading" destination="kyV-Bi-yDY" id="BXg-5w-VUl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBZ-BN-JMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
