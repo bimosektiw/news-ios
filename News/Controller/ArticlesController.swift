@@ -14,6 +14,7 @@ import SDWebImage
 class ArticlesController: UIViewController, CoreApiDelegate, UISearchResultsUpdating {
     
     @IBOutlet weak var articleCollection: UICollectionView!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     let searchController = UISearchController(searchResultsController: nil)
     
     var articlesData = Articles()
@@ -35,6 +36,8 @@ class ArticlesController: UIViewController, CoreApiDelegate, UISearchResultsUpda
         articleApi.start()
         searchController.searchResultsUpdater = self
         self.definesPresentationContext = true
+        self.loading.startAnimating()
+        self.articleCollection.isHidden = true
         
         setupNavigationBar()
     }
@@ -60,6 +63,8 @@ class ArticlesController: UIViewController, CoreApiDelegate, UISearchResultsUpda
         do{
             self.articlesData = try JSONDecoder().decode(Articles.self, from: data)
             self.articleCollection.reloadData()
+            self.loading.stopAnimating()
+            self.articleCollection.isHidden = false
         }catch{}
     }
     
